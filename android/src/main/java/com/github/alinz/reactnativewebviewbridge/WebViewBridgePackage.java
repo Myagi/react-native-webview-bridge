@@ -23,7 +23,7 @@ public class WebViewBridgePackage implements ReactPackage {
         );
     }
 
-    @Override
+    // @Override (deprecated in RN 0.47)
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Arrays.asList();
     }
