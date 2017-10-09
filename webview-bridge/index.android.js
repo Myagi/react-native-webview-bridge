@@ -15,6 +15,7 @@
 
 var React = require('react');
 var ReactNative = require('react-native');
+var PropTypes = require('prop-types');
 var invariant = require('invariant');
 var keyMirror = require('keymirror');
 var resolveAssetSource = require('react-native/Libraries/Image/resolveAssetSource');
@@ -33,7 +34,6 @@ var {
     WebViewBridgeManager
   }
 } = ReactNative;
-var { PropTypes } = React;
 
 var RCT_WEBVIEWBRIDGE_REF = 'webviewbridge';
 
@@ -67,7 +67,7 @@ var WebViewBridge = React.createClass({
     };
   },
 
-  
+
   componentWillMount: function() {
     DeviceEventEmitter.addListener("webViewBridgeMessage", (body) => {
       const { onBridgeMessage } = this.props;
